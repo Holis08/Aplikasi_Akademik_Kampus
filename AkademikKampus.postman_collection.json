@@ -1,0 +1,1537 @@
+{
+	"info": {
+		"_postman_id": "827221a9-0ff9-4466-9321-536901eaca2c",
+		"name": "AkademikKampus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44253564"
+	},
+	"item": [
+		{
+			"name": "Students",
+			"item": [
+				{
+					"name": "Get Students",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "94rgQjT2W5I44aOqjILD91ARq8IN0HOdCDNk460i352e4034",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "http://127.0.0.1:8000",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/students/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"students",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Students by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "94rgQjT2W5I44aOqjILD91ARq8IN0HOdCDNk460i352e4034",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/students/01jwe9rr1pd7x51j5075j269tz",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"students",
+								"01jwe9rr1pd7x51j5075j269tz"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Students",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "94rgQjT2W5I44aOqjILD91ARq8IN0HOdCDNk460i352e4034",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "holis",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "holis@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "nim",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "major",
+									"value": "teknik informatika",
+									"type": "text"
+								},
+								{
+									"key": "enrollment_year",
+									"value": "2022-05-10",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/students/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"students",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Students",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "94rgQjT2W5I44aOqjILD91ARq8IN0HOdCDNk460i352e4034",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Charlesahmad\",\r\n  \"email\": \"charless@gmail.com\",\r\n  \"nim\": \"234234\",\r\n  \"major\":\"teknik carok\",\r\n  \" enrollment_year\":\"2021-05-10\",\r\n  \"password\": \"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/students/01jwec1qka482wcq0pwpehgy22",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"students",
+								"01jwec1qka482wcq0pwpehgy22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hapus Students",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "yVQNVTKLnHdl8frP5w3Vj3TI1hOHX4uClNYL2CVq112453d5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/user/01jsf6rg58t44fqj1wm1ecs7b5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"01jsf6rg58t44fqj1wm1ecs7b5"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "qj5FC3eOgT4sFITm8iqNNXAuFWoTHahN6958s314921c3bc2",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Course",
+			"item": [
+				{
+					"name": "Get Course",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "98BwNyX11M2Mng4NMS8lgnIenvrzURdZ0HjA3nqL03429388",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/api/courses/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"courses",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Course by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "98BwNyX11M2Mng4NMS8lgnIenvrzURdZ0HjA3nqL03429388",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/courses/01jwgg6bzavs9vcr5qqhkxcvcd",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"courses",
+								"01jwgg6bzavs9vcr5qqhkxcvcd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "98BwNyX11M2Mng4NMS8lgnIenvrzURdZ0HjA3nqL03429388",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Pemrograman dekstop",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "WEB101",
+									"type": "text"
+								},
+								{
+									"key": "credits",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "semester",
+									"value": "Semester 1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/courses/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"courses",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "98BwNyX11M2Mng4NMS8lgnIenvrzURdZ0HjA3nqL03429388",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Pemrograman Aplikasi\",\r\n    \"code\": \"WEB101\",\r\n    \"credits\": \"3\",\r\n    \"semester\": \"Semester 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/courses/01jwgg6bzavs9vcr5qqhkxcvcd",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"courses",
+								"01jwgg6bzavs9vcr5qqhkxcvcd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hapus Course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "98BwNyX11M2Mng4NMS8lgnIenvrzURdZ0HjA3nqL03429388",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/courses/01jwgg6bzavs9vcr5qqhkxcvcd",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"courses",
+								"01jwgg6bzavs9vcr5qqhkxcvcd"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "qj5FC3eOgT4sFITm8iqNNXAuFWoTHahN6958s314921c3bc2",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Enrollment",
+			"item": [
+				{
+					"name": "Get Enrollment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "98BwNyX11M2Mng4NMS8lgnIenvrzURdZ0HjA3nqL03429388",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/enrollments/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"enrollments",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Enrollment by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "98BwNyX11M2Mng4NMS8lgnIenvrzURdZ0HjA3nqL03429388",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/enrollments/01jwgj2fjyj75xcafwsffm08en",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"enrollments",
+								"01jwgj2fjyj75xcafwsffm08en"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Enrollment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "98BwNyX11M2Mng4NMS8lgnIenvrzURdZ0HjA3nqL03429388",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "student_id",
+									"value": "01jwe9rr1pd7x51j5075j269tz",
+									"type": "text"
+								},
+								{
+									"key": "course_id",
+									"value": "01jwgg61ghsj777nrws6901j5m",
+									"type": "text"
+								},
+								{
+									"key": "grade",
+									"value": "081234546754",
+									"type": "text"
+								},
+								{
+									"key": "attendance",
+									"value": "sdfsdfsd",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "sdfsdfsdfsd",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/enrollments/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"enrollments",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Enrollment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "98BwNyX11M2Mng4NMS8lgnIenvrzURdZ0HjA3nqL03429388",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"student_id\": \"01jwe9rr1pd7x51j5075j269tz\",\r\n    \"course_id\": \"01jwgg61ghsj777nrws6901j5m\",\r\n    \"grade\": \"081234546754\",\r\n    \"attendance\": \"sdfsdfsd\",\r\n    \"status\": \"sdfsdfsdfsd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/enrollments/01jwgs4r2vwg7cz2229n6qnaqv",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"enrollments",
+								"01jwgs4r2vwg7cz2229n6qnaqv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hapus Enrollment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "98BwNyX11M2Mng4NMS8lgnIenvrzURdZ0HjA3nqL03429388",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/enrollments/01jwghnn1jyw8cqzmr9fyqs7bz",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"enrollments",
+								"01jwghnn1jyw8cqzmr9fyqs7bz"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "qj5FC3eOgT4sFITm8iqNNXAuFWoTHahN6958s314921c3bc2",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Lecturers",
+			"item": [
+				{
+					"name": "Get Lecturers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "98BwNyX11M2Mng4NMS8lgnIenvrzURdZ0HjA3nqL03429388",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/lecturers/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"lecturers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Lecturers by Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "FGG44T2ZWmcSpbg5Wec3gPBx2EOT90B5Worc4gP8c8833316",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/lecturers/01jwgr4hzybr10h6ac14cwk8mg",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"lecturers",
+								"01jwgr4hzybr10h6ac14cwk8mg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Lecturers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "98BwNyX11M2Mng4NMS8lgnIenvrzURdZ0HjA3nqL03429388",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "jingga",
+									"type": "text"
+								},
+								{
+									"key": "nip",
+									"value": "21341234123123",
+									"type": "text"
+								},
+								{
+									"key": "dapartment",
+									"value": "jarkom",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jingga@gamail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/lecturers/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"lecturers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Lecturers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "98BwNyX11M2Mng4NMS8lgnIenvrzURdZ0HjA3nqL03429388",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"hiliolis\",\r\n    \"nip\": \"21231231231\",\r\n    \"dapartment\": \"jarkom\",\r\n    \"email\": \"hiliolis@gamail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/lecturers/01jwgr4hzybr10h6ac14cwk8mg",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"lecturers",
+								"01jwgr4hzybr10h6ac14cwk8mg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hapus Lecturers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "98BwNyX11M2Mng4NMS8lgnIenvrzURdZ0HjA3nqL03429388",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/lecturers/01jwgr4hzybr10h6ac14cwk8mg",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"lecturers",
+								"01jwgr4hzybr10h6ac14cwk8mg"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "qj5FC3eOgT4sFITm8iqNNXAuFWoTHahN6958s314921c3bc2",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "CourseLecturer",
+			"item": [
+				{
+					"name": "Get CourseLecturer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "98BwNyX11M2Mng4NMS8lgnIenvrzURdZ0HjA3nqL03429388",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/api/course-lecturers/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"course-lecturers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get CourseLecturer by Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "01jsf4d02ympze2ag5g3svzjng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/api/stock/01jsd89djv0b88380h9e212rdf",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"stock",
+								"01jsd89djv0b88380h9e212rdf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create CourseLecturer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "98BwNyX11M2Mng4NMS8lgnIenvrzURdZ0HjA3nqL03429388",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "course_id",
+									"value": "01jwgg61ghsj777nrws6901j5m",
+									"type": "text"
+								},
+								{
+									"key": "lecturer_id",
+									"value": "01jwgr4hzybr10h6ac14cwk8mg",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "holis",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/course-lecturers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"course-lecturers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update CourseLecturer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "98BwNyX11M2Mng4NMS8lgnIenvrzURdZ0HjA3nqL03429388",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"course_id\": \"01jwgg61ghsj777nrws6901j5m\",\r\n        \"lecturer_id\": \"01jwgr4hzybr10h6ac14cwk8mg\",\r\n        \"role\": \" p\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/course-lecturers/01jwgrjs3aq8xfdbqtxg5wcrdw",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"course-lecturers",
+								"01jwgrjs3aq8xfdbqtxg5wcrdw"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hapus CourseLecturer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "98BwNyX11M2Mng4NMS8lgnIenvrzURdZ0HjA3nqL03429388",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/course-lecturers/01jwgr8p3t2jdxya841nnkaz3e",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"course-lecturers",
+								"01jwgr8p3t2jdxya841nnkaz3e"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "qj5FC3eOgT4sFITm8iqNNXAuFWoTHahN6958s314921c3bc2",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Get Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var template = `\r",
+							"<style type=\"text/css\">\r",
+							"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+							"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+							"    .tftable tr {background-color:#ffffff;}\r",
+							"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+							"    .tftable tr:hover {background-color:#e0ffff;}\r",
+							"</style>\r",
+							"\r",
+							"<table class=\"tftable\" border=\"1\">\r",
+							"    <tr>\r",
+							"        <th>User ID</th>\r",
+							"        <th>Name</th>\r",
+							"        <th>Username</th>\r",
+							"        <th>Email</th>\r",
+							"        <th>Created At</th>\r",
+							"        <th>Updated At</th>\r",
+							"    </tr>\r",
+							"    <tr>\r",
+							"        <td>{{response.user.id}}</td>\r",
+							"        <td>{{response.user.name}}</td>\r",
+							"        <td>{{response.user.username}}</td>\r",
+							"        <td>{{response.user.email}}</td>\r",
+							"        <td>{{response.user.created_at}}</td>\r",
+							"        <td>{{response.user.updated_at}}</td>\r",
+							"    </tr>\r",
+							"</table>\r",
+							"`;\r",
+							"\r",
+							"function constructVisualizerPayload() {\r",
+							"    return {response: pm.response.json()}\r",
+							"}\r",
+							"\r",
+							"pm.visualizer.set(template, constructVisualizerPayload());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "holis@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123123123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "Admin",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "iMPt0lP21805j9YXxxMcGnS3st9bzalqQ5whtVqYe7f11061",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/logout",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
