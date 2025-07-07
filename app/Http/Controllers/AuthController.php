@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models\Student;
 use Illuminate\Http\Request;
-use App\Http\Requests\Auth\LoginRequest;
-use App\Models\Students;
+use App\Http\Requests\LoginRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
@@ -18,10 +17,10 @@ class AuthController extends Controller
         $credentials = $request->validated();
 
 
-        $user = Students::whereRaw('BINARY email = ?', [$credentials['email']])->first();
+        $user = Student::whereRaw('BINARY NIM = ?', [$credentials['NIM']])->first();
         if (! $user || ! Hash::check($credentials['password'], $user->password)) {
             throw ValidationException::withMessages([
-                'email' => 'email atau password salah.',
+                'NIM' => 'NIM atau password salah.',
             ]);
         }
 

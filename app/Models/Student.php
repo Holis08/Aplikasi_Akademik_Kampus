@@ -2,34 +2,28 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
-
-class Students extends Authenticatable
+class Student extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable, HasApiTokens, HasUlids;
+    use HasApiTokens, HasFactory, Notifiable, HasUlids;
 
     /**
      * The attributes that are mass assignable.
      *
      * @var list<string>
      */
-
-    protected $table = 'students';
-
     protected $fillable = [
-        'name',
+        'NIM',
         'email',
-        'nim',
-        'major',
-        'enrollment_year',
         'password',
+        'name',
+        'major',
+        'enrollment_year'
     ];
 
     /**
@@ -50,8 +44,18 @@ class Students extends Authenticatable
     protected function casts(): array
     {
         return [
+            'NIM'=>'string',
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'enrollment_year' => 'string',
+            'major' => 'string',
+            'name' => 'string',
+
         ];
     }
+
+    public function setNimAttribute($value)
+{
+    $this->attributes['NIM'] = strtolower($value);
+}
 }

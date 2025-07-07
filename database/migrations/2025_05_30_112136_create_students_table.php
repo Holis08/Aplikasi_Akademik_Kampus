@@ -15,10 +15,11 @@ return new class extends Migration
             $table->ulid('id')->primary();
             $table->string('name');
             $table->string('email')->unique();
-            $table->char('nim');
-            $table->string('major');
-            $table->date('enrollment_year');
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('NIM')->unique();
             $table->string('password');
+            $table->string('major')->nullable();
+            $table->date('enrollment_year')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
