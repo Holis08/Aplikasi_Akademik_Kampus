@@ -17,10 +17,9 @@ class CourseLecturer extends Model
         'role'
     ];
     protected $casts = [
-        'id' => 'string',
         'course_id' => 'string',
         'lecturer_id' => 'string',
-        'role' => 'integer',
+        'role' => 'string',
     ];
 
     public function course(): BelongsTo

@@ -45,7 +45,7 @@ class Student extends Authenticatable
     {
         return [
             'NIM'=>'string',
-            'email_verified_at' => 'datetime',
+            'email' => 'string',
             'password' => 'hashed',
             'enrollment_year' => 'string',
             'major' => 'string',

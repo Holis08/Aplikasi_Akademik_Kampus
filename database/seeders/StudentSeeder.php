@@ -15,9 +15,9 @@ class StudentSeeder extends Seeder
     {
         Student::create([
             'name' => 'Admin',
-            'NIM' => '123456789',
-            'major' => 'Computer Science',
-            'email' => 'admin@ifump.net',
+            'NIM' => '221220087',
+            'major' => 'Informatics Engineering',
+            'email' => '221220087@gmail.com',
             'password' => Hash::make('password'),
             'enrollment_year' => '2020-01-01',
         ]);

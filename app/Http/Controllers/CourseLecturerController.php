@@ -30,7 +30,7 @@ class CourseLecturerController extends Controller
         $request->validate([
             'course_id' => 'required|exists:courses,id',
             'lecturer_id' => 'required|exists:lecturers,id',
-            'role' => 'required|integer|min:0',
+            'role' => 'required|string|max:255',
         ]);
 
         $courseLecturer = CourseLecturer::create($request->only([
@@ -51,7 +51,7 @@ class CourseLecturerController extends Controller
             $request->validate([
                 'course_id' => 'sometimes|exists:courses,id',
                 'lecturer_id' => 'sometimes|exists:lecturers,id',
-                'role' => 'sometimes|integer|min:0',
+                'role' => 'sometimes|string|max:255',
             ]);
 
             $courseLecturer->update($request->only([

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->ulid('id')->primary();
             $table->foreignUlid('course_id')->constrained('courses')->cascadeOnDelete();
             $table->foreignUlid('lecturer_id')->constrained('lecturers')->cascadeOnDelete();
-            $table->integer('role')->default(0);
+            $table->string('role')->nullable();
             $table->timestamps();
         });
     }
